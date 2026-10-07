@@ -1,0 +1,4 @@
+package com.learnspace.model;
+import jakarta.persistence.*; import java.time.LocalDate;
+@Entity @Table(name="course_batch") public class Batch { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(optional=false) private Course course; private String name, schedule; private LocalDate startDate; private int seats;
+ public Long getId(){return id;} public Course getCourse(){return course;} public void setCourse(Course v){course=v;} public String getName(){return name;} public void setName(String v){name=v;} public String getSchedule(){return schedule;} public void setSchedule(String v){schedule=v;} public LocalDate getStartDate(){return startDate;} public void setStartDate(LocalDate v){startDate=v;} public int getSeats(){return seats;} public void setSeats(int v){seats=v;} }

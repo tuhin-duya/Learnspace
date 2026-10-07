@@ -1,0 +1,4 @@
+package com.learnspace.model;
+import jakarta.persistence.*; import java.time.LocalDateTime;
+@Entity public class Enrollment { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(optional=false) private AppUser student; @ManyToOne(optional=false) private Batch batch; private LocalDateTime purchasedAt=LocalDateTime.now(); private double paid; private int progress;
+ public Long getId(){return id;} public AppUser getStudent(){return student;} public void setStudent(AppUser v){student=v;} public Batch getBatch(){return batch;} public void setBatch(Batch v){batch=v;} public LocalDateTime getPurchasedAt(){return purchasedAt;} public double getPaid(){return paid;} public void setPaid(double v){paid=v;} public int getProgress(){return progress;} public void setProgress(int v){progress=v;} }

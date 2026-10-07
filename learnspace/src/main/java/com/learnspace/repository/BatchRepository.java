@@ -1,0 +1,1 @@
+package com.learnspace.repository; import com.learnspace.model.Batch; import org.springframework.data.jpa.repository.JpaRepository; import java.util.List; public interface BatchRepository extends JpaRepository<Batch,Long>{ List<Batch> findByCourseId(Long id); long countByCourseId(Long id); }

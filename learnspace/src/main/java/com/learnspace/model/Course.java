@@ -1,0 +1,4 @@
+package com.learnspace.model;
+import jakarta.persistence.*;
+@Entity public class Course { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; private String title, instructor, category, level, thumbnail; @Column(length=1500) private String description; private double price;
+ public Long getId(){return id;} public String getTitle(){return title;} public void setTitle(String v){title=v;} public String getInstructor(){return instructor;} public void setInstructor(String v){instructor=v;} public String getCategory(){return category;} public void setCategory(String v){category=v;} public String getLevel(){return level;} public void setLevel(String v){level=v;} public String getThumbnail(){return thumbnail;} public void setThumbnail(String v){thumbnail=v;} public String getDescription(){return description;} public void setDescription(String v){description=v;} public double getPrice(){return price;} public void setPrice(double v){price=v;} }

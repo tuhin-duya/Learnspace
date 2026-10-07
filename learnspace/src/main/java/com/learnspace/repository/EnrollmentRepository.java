@@ -1,0 +1,1 @@
+package com.learnspace.repository; import com.learnspace.model.Enrollment; import org.springframework.data.jpa.repository.JpaRepository; import java.util.List; public interface EnrollmentRepository extends JpaRepository<Enrollment,Long>{ List<Enrollment> findByStudentId(Long id); long countByBatchId(Long id); boolean existsByStudentIdAndBatchId(Long studentId,Long batchId); }
